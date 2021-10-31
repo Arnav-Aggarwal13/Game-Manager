@@ -1,0 +1,692 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "game manager",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "SetTwoPlayerNamesIntent",
+          "slots": [
+            {
+              "name": "playerOne",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{playerOne} ",
+                "The first player is {playerOne}"
+              ]
+            },
+            {
+              "name": "playerTwo",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "The second player is {playerTwo}",
+                "{playerTwo}"
+              ]
+            },
+            {
+              "name": "numplayer",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "there are {numplayer} players and their names are {playerOne} and {playerTwo}",
+            "{playerOne} and {playerTwo}",
+            "Their names are {playerOne} and {playerTwo}",
+            "They are {playerOne} and {playerTwo}",
+            "The players are {playerOne} and {playerTwo}"
+          ]
+        },
+        {
+          "name": "PointsManagerIntent",
+          "slots": [
+            {
+              "name": "points",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "add {points} points",
+                "add {points}",
+                "{points} points",
+                "{points}"
+              ]
+            },
+            {
+              "name": "playerName",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "to {playerName}",
+                "Add them to {playerName}",
+                "{playerName}"
+              ]
+            },
+            {
+              "name": "action",
+              "type": "Action"
+            },
+            {
+              "name": "ToFrom",
+              "type": "ToFrom"
+            }
+          ],
+          "samples": [
+            "{action} {playerName} {points} points",
+            "{action} {points} points {ToFrom} {playerName}"
+          ]
+        },
+        {
+          "name": "ResetScoresIntent",
+          "slots": [],
+          "samples": [
+            "start a new game",
+            "restart the game",
+            "Set the scores to zero",
+            "Reset the score"
+          ]
+        },
+        {
+          "name": "NumberOfPlayersIntent",
+          "slots": [
+            {
+              "name": "numplayer",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{numplayer} players",
+                "{numplayer}"
+              ]
+            }
+          ],
+          "samples": [
+            "{numplayer} players",
+            "{numplayer}"
+          ]
+        },
+        {
+          "name": "SetThreePlayerNamesIntent",
+          "slots": [
+            {
+              "name": "playerOne",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{playerOne} {playerTwo} and {playerThree}",
+                "{playerOne} {playerTwo} {playerThree}"
+              ]
+            },
+            {
+              "name": "playerTwo",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{playerTwo}",
+                "{playerTwo} {playerThree}",
+                "{playerTwo} and {playerThree}"
+              ]
+            },
+            {
+              "name": "playerThree",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{playerThree}"
+              ]
+            },
+            {
+              "name": "numplayer",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "there are {numplayer} players and their names are {playerOne} {playerTwo} and {playerThree}",
+            "Their names are {playerOne} {playerTwo} and {playerThree}",
+            "They are {playerOne} {playerTwo} and {playerThree}",
+            "{playerOne} {playerTwo} and {playerThree}",
+            "{playerOne} {playerTwo} {playerThree}"
+          ]
+        },
+        {
+          "name": "SetFourPlayerNamesIntent",
+          "slots": [
+            {
+              "name": "playerOne",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "the players are {playerOne} {playerTwo} {playerThree} {playerFour}",
+                "their names are {playerOne} {playerTwo} {playerThree} and {playerFour}",
+                "{playerOne} {playerTwo} {playerThree} and {playerFour}",
+                "{playerOne} {playerTwo} {playerThree} {playerFour}"
+              ]
+            },
+            {
+              "name": "playerTwo",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{playerTwo} {playerThree} and {playerFour}",
+                "{playerTwo} {playerThree} {playerFour}"
+              ]
+            },
+            {
+              "name": "playerThree",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{playerThree} and {playerFour}",
+                "{playerThree} {playerFour}"
+              ]
+            },
+            {
+              "name": "playerFour",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{playerFour}"
+              ]
+            },
+            {
+              "name": "numplayer",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "there are {numplayer} players and their names are {playerOne} {playerTwo} {playerThree} and {playerFour}",
+            "The players are {playerOne} {playerTwo} {playerThree} and {playerFour}",
+            "Their names are {playerOne} {playerTwo} {playerThree} and {playerFour}",
+            "{playerOne} {playerTwo} {playerThree} and {playerFour}",
+            "{playerOne} {playerTwo} {playerThree} {playerFour}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "subtract"
+              }
+            },
+            {
+              "name": {
+                "value": "add",
+                "synonyms": [
+                  "give"
+                ]
+              }
+            }
+          ],
+          "name": "Action"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "shweta",
+                "synonyms": [
+                  "swetha",
+                  "shwetha"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "arnav",
+                "synonyms": [
+                  "arnold",
+                  "arnaud"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "anusha",
+                "synonyms": [
+                  "anisha"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "manoj"
+              }
+            }
+          ],
+          "name": "AMAZON.FirstName"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "from"
+              }
+            },
+            {
+              "name": {
+                "value": "to"
+              }
+            }
+          ],
+          "name": "ToFrom"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "SetTwoPlayerNamesIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.365425939448"
+          },
+          "slots": [
+            {
+              "name": "playerOne",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1203584799520.90621321483"
+              }
+            },
+            {
+              "name": "playerTwo",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1203584799520.293209113646"
+              }
+            },
+            {
+              "name": "numplayer",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "PointsManagerIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.759709043279"
+          },
+          "slots": [
+            {
+              "name": "points",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1555310168872.762025036337"
+              }
+            },
+            {
+              "name": "playerName",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1555310168872.458574852990"
+              }
+            },
+            {
+              "name": "action",
+              "type": "Action",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.361218543921.1267857692135"
+              }
+            },
+            {
+              "name": "ToFrom",
+              "type": "ToFrom",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "NumberOfPlayersIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "numplayer",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.169593323631.498843854661"
+              },
+              "validations": [
+                {
+                  "type": "isInSet",
+                  "prompt": "Slot.Validation.169593323631.498843854661.907295106373",
+                  "values": [
+                    "2",
+                    "3",
+                    "4"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SetThreePlayerNamesIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.189035507893"
+          },
+          "slots": [
+            {
+              "name": "playerOne",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1585470371076.444574673765"
+              }
+            },
+            {
+              "name": "playerTwo",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1585470371076.412839205011"
+              }
+            },
+            {
+              "name": "playerThree",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1585470371076.631425046247"
+              }
+            },
+            {
+              "name": "numplayer",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        },
+        {
+          "name": "SetFourPlayerNamesIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.227164684944"
+          },
+          "slots": [
+            {
+              "name": "playerOne",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.543210058182.652096536598"
+              }
+            },
+            {
+              "name": "playerTwo",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.543210058182.1033898629093"
+              }
+            },
+            {
+              "name": "playerThree",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.543210058182.498049039691"
+              }
+            },
+            {
+              "name": "playerFour",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.543210058182.1056841267985"
+              }
+            },
+            {
+              "name": "numplayer",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1203584799520.90621321483",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What are the names of the players?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1203584799520.293209113646",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the name of the second player?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.912465290597.1331696705333",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "How many points?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1555310168872.458574852990",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Who should I add {points} points to?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Which player?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1555310168872.762025036337",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "How many points?"
+          },
+          {
+            "type": "PlainText",
+            "value": "How many points should I add to {playerName} ?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.707778662820",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "I have {playerOne} {playerTwo} {playerThree} and {playerFour} . Is that correct?"
+          },
+          {
+            "type": "PlainText",
+            "value": "I have {playerOne} {playerTwo} , and {playerThree}  Is that correct?"
+          },
+          {
+            "type": "PlainText",
+            "value": "I have {playerOne} and {playerTwo} Is that correct?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.759709043279",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "{action} {points} points {ToFrom} {playerName} . Correct?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.361218543921.1267857692135",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "would you like to add or subtract {points} points from {playerName}"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.365425939448",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "{playerOne} and {playerTwo} . Is that correct?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.742338151680.1304525393549.769801591084",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "You may only have two to four players."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.169593323631.498843854661",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "How many players are there?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.169593323631.498843854661.907295106373",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "This game can only have two to four people"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1585470371076.444574673765",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What are the names of the three players"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1585470371076.412839205011",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What are the names of the last two players?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1585470371076.631425046247",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the name of the last player?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.543210058182.652096536598",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what are the names of the four players"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.543210058182.1033898629093",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what are the names of the last three players?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.543210058182.498049039691",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what are the names of the last two people?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.543210058182.1056841267985",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what is the name of the last player?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.227164684944",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "{playerOne} {playerTwo} {playerThree} and {playerFour} . Is that correct?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.189035507893",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "{playerOne} {playerTwo} and {playerThree} . Is that correct?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "20"
+}

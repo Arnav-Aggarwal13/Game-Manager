@@ -1,0 +1,27 @@
+{
+  "type": "APL",
+  "version": "1.4",
+  "import": [
+    {
+      "name": "alexa-layouts",
+      "version": "1.1.0"
+    }
+  ],
+  "background": "#65151E",
+  "mainTemplate": {
+    "parameters": [
+      "headlineData"
+    ],
+    "items": [
+      {
+        "type": "AlexaHeadline",
+        "primaryText": "${headlineData.primaryText}",
+        "footerHintText": "${headlineData.footerHintText}",
+        "backgroundColor": "@colorRed800",
+        "headerAttributionImage": "${headlineData.headerAttributionImage}",
+        "headerDivider": true,
+        "headerTitle": "${headlineData.headerTitle}"
+      }
+    ]
+  }
+}
